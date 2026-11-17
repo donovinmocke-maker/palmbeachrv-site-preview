@@ -37,12 +37,12 @@
     {
       id: "hours",
       keywords: ["hour", "hours", "open", "office", "when are you", "business hours", "9am", "9 am"],
-      answer: "The office is open Monday–Sunday, 9am–5pm. Gate access is 24 hours a day, 7 days a week. Staff is on site Monday through Sunday during business hours. For gate code and access issues outside those hours, there will be 24-hour support."
+      answer: "The office is open Monday–Sunday, 9am–5pm. Gate access is 24 hours a day, 7 days a week. Staff is on site Monday through Sunday during business hours. For an urgent gate problem after office hours, please call (239) 523-0756."
     },
     {
       id: "gate",
-      keywords: ["gate", "access", "gate code", "keypad", "24 hour", "24-hour", "24/7", "get in", "get in and out", "in and out", "how do i get in"],
-      answer: "Gate access runs 24 hours a day, 7 days a week. You get your own gate code when you move in — not shared. If you’re not a tenant with a gate code, you’re not getting in. For gate code and access issues outside office hours, there will be 24-hour support."
+      keywords: ["gate", "access", "gate code", "keypad", "24 hour", "24-hour", "24/7", "get in", "get in and out", "in and out", "how do i get in", "stuck", "locked out", "won't open", "after hours", "after-hours", "urgent", "emergency"],
+      answer: "Gate access runs 24 hours a day, 7 days a week. You get your own gate code when you move in — not shared. If you’re not a tenant with a gate code, you’re not getting in. For an urgent gate problem after office hours, please call (239) 523-0756."
     },
     {
       id: "address",
@@ -92,7 +92,7 @@
     {
       id: "contact",
       keywords: ["phone", "call", "email", "contact", "number"],
-      answer: "You can call the office at (239) 523-0756 or email palmbeachstorage@gmail.com. Office hours are Monday–Sunday, 9am–5pm. You can also talk to a person using the button below, or request a call back."
+      answer: "You can ask for a call back or talk to a person at any time using the button below. You can also call the office at (239) 523-0756 or email palmbeachstorage@gmail.com. Office hours are Monday–Sunday, 9am–5pm. For an urgent gate problem after office hours, please call (239) 523-0756."
     },
     {
       id: "about",
@@ -106,11 +106,11 @@
     }
   ];
 
-  const GREETING = "Hi — welcome to Palm Beach RV & Boat Storage. How can we help you today? You can check availability, reserve a space, ask a question, or talk to a person at any time.\n\nOr ask me anything in the box below, for example \"Is electric included?\".";
+  const GREETING = "Hi — welcome to Palm Beach RV & Boat Storage. How can we help you today? You can check availability, reserve a space, or ask a question. You can request a call back or talk to a person at any time.\n\nFor an urgent gate problem after office hours, please call (239) 523-0756.\n\nOr ask me anything in the box below, for example \"Is electric included?\".";
 
   const UNKNOWN = "I don’t have that information here, but a team member will follow up with you. What’s the best name and a phone number or email to reach you?";
 
-  const ASK_PROMPT = "Of course — type your question below and we’ll help if we can. If you’d rather speak with someone, use Talk to a person at any time.";
+  const ASK_PROMPT = "Of course — type your question below and we’ll help if we can. You can request a call back or talk to a person at any time. For an urgent gate problem after office hours, please call (239) 523-0756.";
 
   var state = {
     open: false,
@@ -357,7 +357,7 @@
     var card = el(
       '<div class="pbrv-chat-person" id="pbrv-person-card">' +
         "<h3>Talk to a person</h3>" +
-        "<p>Call the office during office hours, or request a call back and we’ll get back to you.</p>" +
+        "<p>You can request a call back or talk to a person at any time. Call the office during office hours. For an urgent gate problem after hours, please call " + PHONE_DISPLAY + ".</p>" +
         '<a class="pbrv-chat-call" href="' + PHONE_TEL + '">Call ' + PHONE_DISPLAY + "</a>" +
         "<p><strong>Office hours:</strong> " + OFFICE_HOURS + "<br><strong>Gate access:</strong> " + GATE_HOURS + "</p>" +
         "<h3>Request a call back</h3>" +
@@ -395,7 +395,7 @@
         return;
       }
     }
-    var intro = "You can call the office or request a call back. Office hours are " + OFFICE_HOURS + ".";
+    var intro = "You can request a call back or talk to a person at any time. You can also call the office during office hours (" + OFFICE_HOURS + "). For an urgent gate problem after hours, please call " + PHONE_DISPLAY + ".";
     addBot(intro, { extra: personCard() });
   }
 

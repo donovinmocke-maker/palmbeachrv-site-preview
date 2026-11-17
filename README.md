@@ -15,7 +15,7 @@ Then visit http://localhost:8080
 - Privacy, Terms, Disclaimer (official Termageddon documents already used on the current site)
 - Sitemap
 
-The header Enquiries button and the floating Enquiries bubble open the on-site chat. The hero Call button remains a phone link.
+The header Enquiries button, the floating Enquiries bubble, and Chat with us buttons around the site open the on-site chat. The office number is kept as a smaller “Prefer to talk? Call (239) 523-0756” line, and in the footer and schema for local search.
 
 Rent/reserve uses the official Storable `<rental-app>` widget from the current website (same organization, facility, and access key). It needs an internet connection to load.
 
