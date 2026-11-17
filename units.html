@@ -13,6 +13,7 @@
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=Outfit:wght@500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/styles.css">
   <link rel="stylesheet" href="css/chat.css">
+  <link rel="stylesheet" href="css/lot-map.css">
   
   
 </head>
@@ -75,6 +76,35 @@
   </div>
 </section>
 
+
+<section class="section" id="pick-space">
+  <div class="wrap-wide">
+    <div class="section-head">
+      <p class="kicker">Site plan</p>
+      <h2>Pick your space</h2>
+      <p>Tap a space on the plan to check it or start a reservation. Pinch or use the buttons to zoom, and drag to pan. The dumpster sits between 449 and 300, the air compressor next to 617 and 635, the RV flush station near 100, and the office and ice machine at the entrance.</p>
+    </div>
+    <div class="lot-demo-banner" role="status">Demo — example availability. Live colors will come from Storable Edge.</div>
+    <div class="lot-map" id="lot-map" data-lot-map>
+      <div class="lot-map-toolbar">
+        <ul class="lot-legend">
+          <li><span class="lot-swatch lot-swatch--available" aria-hidden="true"></span> Available (example)</li>
+          <li><span class="lot-swatch lot-swatch--rented" aria-hidden="true"></span> Rented (example)</li>
+          <li><span class="lot-swatch lot-swatch--amenity" aria-hidden="true"></span> Amenity</li>
+        </ul>
+        <div class="lot-zoom-btns">
+          <button type="button" data-lot-zoom="out" aria-label="Zoom out">−</button>
+          <button type="button" data-lot-zoom="reset" aria-label="Reset map">Reset</button>
+          <button type="button" data-lot-zoom="in" aria-label="Zoom in">+</button>
+        </div>
+      </div>
+      <div class="lot-map-viewport" data-lot-viewport tabindex="0" aria-label="Interactive site plan. Pinch or use the zoom buttons, drag to pan, then tap a space."></div>
+      <aside class="lot-card" data-lot-card hidden></aside>
+    </div>
+    <p class="lot-map-note">Space locations are traced from the facility site plan and are approximate. Size and price for a given space are shown at checkout.</p>
+  </div>
+</section>
+
 <section class="section section-sand" id="rent-section">
   <div class="wrap">
     <div class="section-head">
@@ -95,17 +125,6 @@
     data-access-key="webapps_m3cw2kwa23">
   </rental-app>
 </div>
-  </div>
-</section>
-
-<section class="section">
-  <div class="wrap">
-    <div class="section-head">
-      <p class="kicker">Layout</p>
-      <h3>Units and Amenities Map</h3>
-      <p>Use this map to locate the dumpster between unit 449 and 300, the air compressor next to unit 617 and 635, the RV flush station near unit 100, and the office and ice machine at the entrance.</p>
-    </div>
-    <img src="images/unit-map.jpg" alt="Unit and amenity map of Palm Beach RV &amp; Boat Storage, showing dumpsters, air compressor, RV flush station, office, and ice machine." style="border-radius:16px;box-shadow:var(--shadow-soft);background:#fff;padding:0.5rem">
   </div>
 </section>
 
@@ -182,5 +201,6 @@
      Hook: <span id="spaces-available" data-spaces-available></span> -->
 <script src="js/main.js"></script>
 <script src="js/chat.js"></script>
+<script src="js/lot-map.js"></script>
 </body>
 </html>

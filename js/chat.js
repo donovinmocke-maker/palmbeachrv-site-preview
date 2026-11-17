@@ -585,6 +585,32 @@
     });
   }
 
+  function openChatPrefill(opts) {
+    opts = opts || {};
+    function fill() {
+      openChat();
+      if (opts.prefill) {
+        var input = document.getElementById("pbrv-chat-input");
+        if (input) {
+          input.value = opts.prefill;
+          input.focus();
+          if (typeof input.setSelectionRange === "function") {
+            var n = input.value.length;
+            input.setSelectionRange(n, n);
+          }
+        }
+      }
+    }
+    if (!document.getElementById("pbrv-chat-panel")) {
+      mount();
+    }
+    fill();
+  }
+
+  window.PBRVChat = {
+    open: openChatPrefill
+  };
+
   if (document.readyState === "loading") {
     document.addEventListener("DOMContentLoaded", mount);
   } else {
