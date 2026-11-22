@@ -106,6 +106,12 @@
     }
   ];
 
+  /* Preview only: answers that rely on facts the owner hasn't confirmed yet say so. */
+  if (document.documentElement.hasAttribute("data-preview")) {
+    var TBC_IDS = { hours: 1, gate: 1, prices: 1, electric: 1, about: 1, clearance: 1 };
+    FAQ.forEach(function (f) { if (TBC_IDS[f.id]) f.answer += "\n\n(Preview note: these details are waiting for the owner to confirm.)"; });
+  }
+
   const GREETING = "Hi — welcome to Palm Beach RV & Boat Storage. How can we help you today? You can check availability, reserve a space, or ask a question. You can request a call back or talk to a person at any time.\n\nFor an urgent gate problem after office hours, please call (239) 523-0756.\n\nOr ask me anything in the box below, for example \"Is electric included?\".";
 
   const UNKNOWN = "I don’t have that information here, but a team member will follow up with you. What’s the best name and a phone number or email to reach you?";

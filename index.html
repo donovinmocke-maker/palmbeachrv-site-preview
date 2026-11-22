@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-preview>
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -45,8 +45,7 @@
   
 </head>
 <body>
-<div class="preview-ribbon" role="status">Preview for owner review — not the live site</div>
-
+<div class="preview-ribbon" role="status">Preview for owner review — not the live site<span class="ribbon-sep"> · </span><span class="ribbon-tbc">Underlined <span class="tbc-key">to confirm</span> items are waiting for your OK</span></div>
 <a class="skip" href="#main">Skip to content</a>
 <header class="site-header">
   <div class="header-inner">
@@ -76,9 +75,9 @@
     </div>
     <p class="prefer-call prefer-call-on-dark">Prefer to talk? Call <a href="tel:2395230756">(239) 523-0756</a></p>
     <div class="hero-meta">
-      <span><strong>362</strong> covered spots</span>
-      <span><strong>24-hour</strong> gate access</span>
-      <span>From <strong>$220</strong>/mo</span>
+      <span><span class="tbc" data-tbc="number of spaces" title="Waiting for confirmation: number of spaces"><strong>362</strong> covered spots</span></span>
+      <span><span class="tbc" data-tbc="gate hours" title="Waiting for confirmation: gate hours"><strong>24-hour</strong> gate access</span></span>
+      <span><span class="tbc" data-tbc="current rates" title="Waiting for confirmation: current rates">From <strong>$220</strong>/mo</span></span>
       <!-- TODO: live spaces-available count from Storable Edge API -->
     </div>
   </div>
@@ -86,9 +85,9 @@
 
 <section class="trust">
   <div class="wrap trust-grid">
-    <div class="trust-item"><strong>24-hour access</strong><span>Gate access, day or night</span></div>
+    <div class="trust-item"><span class="tbc" data-tbc="gate hours" title="Waiting for confirmation: gate hours"><strong>24-hour access</strong></span><span>Gate access, day or night</span></div>
     <div class="trust-item"><strong>Covered canopies</strong><span>A roof over every spot</span></div>
-    <div class="trust-item"><strong>Electric included</strong><span>Included in the monthly rate</span></div>
+    <div class="trust-item"><strong><span class="tbc" data-tbc="electric included" title="Waiting for confirmation: electric included">Electric included</span></strong><span>Included in the monthly rate</span></div>
     <div class="trust-item"><strong>Gated &amp; fenced</strong><span>Concrete block perimeter</span></div>
     <div class="trust-item"><strong>On site daily</strong><span>Staff, Monday through Sunday</span></div>
     <div class="trust-item"><strong>15-foot clearance</strong><span>Fits anything street-legal</span></div>
@@ -100,25 +99,25 @@
     <div class="section-head">
       <p class="kicker">Units &amp; pricing</p>
       <h2>Find the right space for you</h2>
-      <p>362 covered spots on Palm Beach Boulevard. Sized for boats, RVs, trailers, and everything in between.</p>
+      <p><span class="tbc" data-tbc="number of spaces" title="Waiting for confirmation: number of spaces">362 covered spots</span> on Palm Beach Boulevard. Sized for boats, RVs, trailers, and everything in between.</p>
     </div>
     <div class="unit-grid"><article class="unit-card">
   <div class="size">9&#x27; × 28.75&#x27;</div>
   <div class="size-sub">Covered storage space</div>
-  <div class="chips"><span class="chip">self storage</span><span class="chip">20 amp electric</span><span class="chip">Building 2</span><span class="chip">Covered</span></div>
-  <div class="price-row"><span class="price">$220</span><span class="period">/mo</span></div>
+  <div class="chips"><span class="chip">self storage</span><span class="chip tbc" data-tbc="20 vs 30 amp by building">20 amp electric</span><span class="chip">Building 2</span><span class="chip">Covered</span></div>
+  <div class="price-row"><span class="price tbc" data-tbc="current rates">$220</span><span class="period">/mo</span></div>
   <button type="button" class="btn btn-outline btn-block" data-open-chat aria-haspopup="dialog" aria-controls="pbrv-chat-panel" aria-expanded="false">Chat with us</button>
 </article><article class="unit-card">
   <div class="size">11&#x27; × 28.75&#x27;</div>
   <div class="size-sub">Covered storage space</div>
-  <div class="chips"><span class="chip">self storage</span><span class="chip">20 amp electric</span><span class="chip">Building 2</span><span class="chip">Covered</span></div>
-  <div class="price-row"><span class="price">$270</span><span class="period">/mo</span></div>
+  <div class="chips"><span class="chip">self storage</span><span class="chip tbc" data-tbc="20 vs 30 amp by building">20 amp electric</span><span class="chip">Building 2</span><span class="chip">Covered</span></div>
+  <div class="price-row"><span class="price tbc" data-tbc="current rates">$270</span><span class="period">/mo</span></div>
   <a class="btn btn-primary btn-block" href="units.html#rent">Reserve</a>
 </article><article class="unit-card">
   <div class="size">11&#x27; × 29.5&#x27;</div>
   <div class="size-sub">Covered storage space</div>
-  <div class="chips"><span class="chip">self storage</span><span class="chip">20 amp electric</span><span class="chip">Building 3</span><span class="chip">Covered</span></div>
-  <div class="price-row"><span class="price">$275</span><span class="period">/mo</span></div>
+  <div class="chips"><span class="chip">self storage</span><span class="chip tbc" data-tbc="20 vs 30 amp by building">20 amp electric</span><span class="chip">Building 3</span><span class="chip">Covered</span></div>
+  <div class="price-row"><span class="price tbc" data-tbc="current rates">$275</span><span class="period">/mo</span></div>
   <a class="btn btn-primary btn-block" href="units.html#rent">Reserve</a>
 </article></div>
     <p class="unit-note">More sizes may be available. Check live availability and reserve your spot online in minutes.</p>
@@ -162,7 +161,7 @@
   </div>
   <div class="wrap" style="margin-top:2.5rem">
     <div class="amenity-grid">
-      <article class="amenity"><h3>Covered Storage</h3><p>Every spot has a roof over it. Sun and rain protection comes standard, not as an upgrade.</p></article><article class="amenity"><h3>Paved</h3><p>Clean, solid surface throughout the facility.</p></article><article class="amenity"><h3>Gated &amp; Fenced</h3><p>A full concrete block perimeter with one way in and one way out. That&#x27;s the front gate.</p></article><article class="amenity"><h3>Keypad Access</h3><p>Every tenant gets their own individual code.</p></article><article class="amenity"><h3>24 hour security</h3><p>Full surveillance runs throughout the facility. Well lit at night.</p></article><article class="amenity"><h3>Electric Included</h3><p>Electric is included in the monthly rate, at no extra fee. Buildings 2, 3, and 5 have 20-amp outlets. All other buildings have 30-amp. Keeps your batteries conditioned and your systems running between trips.</p></article><article class="amenity"><h3>Boat Wash Bay</h3><p>Built for washing down your boat and flushing the motor after a saltwater trip on the river or the Gulf. Enclosed wash bay with a motor flush station on site.</p></article><article class="amenity"><h3>Ice Machine</h3><p>200-lb Ice Machine: Grab a bag on your way to the ramp.</p></article><article class="amenity"><h3>Waste Dump Station</h3><p>Take care of the tank before you head home. The wash bay, dump station, and service area are at the rear of the property.</p></article>
+      <article class="amenity"><h3>Covered Storage</h3><p>Every spot has a roof over it. Sun and rain protection comes standard, not as an upgrade.</p></article><article class="amenity"><h3>Paved</h3><p>Clean, solid surface throughout the facility.</p></article><article class="amenity"><h3>Gated &amp; Fenced</h3><p>A full concrete block perimeter with one way in and one way out. That&#x27;s the front gate.</p></article><article class="amenity"><h3>Keypad Access</h3><p>Every tenant gets their own individual code.</p></article><article class="amenity"><h3>24 hour security</h3><p>Full surveillance runs throughout the facility. Well lit at night.</p></article><article class="amenity"><h3>Electric Included</h3><p><span class="tbc" data-tbc="electric included" title="Waiting for confirmation: electric included">Electric is included in the monthly rate, at no extra fee.</span> <span class="tbc" data-tbc="20 vs 30 amp by building" title="Waiting for confirmation: 20 vs 30 amp by building">Buildings 2, 3, and 5 have 20-amp outlets. All other buildings have 30-amp.</span> Keeps your batteries conditioned and your systems running between trips.</p></article><article class="amenity"><h3>Boat Wash Bay</h3><p>Built for washing down your boat and flushing the motor after a saltwater trip on the river or the Gulf. Enclosed wash bay with a motor flush station on site.</p></article><article class="amenity"><h3>Ice Machine</h3><p>200-lb Ice Machine: Grab a bag on your way to the ramp.</p></article><article class="amenity"><h3>Waste Dump Station</h3><p>Take care of the tank before you head home. The wash bay, dump station, and service area are at the rear of the property.</p></article>
     </div>
   </div>
 </section>
@@ -173,7 +172,7 @@
     <div>
       <p class="kicker">About us</p>
       <h2>Born here. Built here.</h2>
-      <p>The team brings together alumni from both Fort Myers High School and Riverdale High School. With deep family ties reaching from Buckingham and Alva to the heart of Fort Myers, their local heritage is a cornerstone of the group. They’ve watched Lee County grow for over 30 years. More people, more neighborhoods, more boats and RVs, and not enough covered places to keep them.</p>
+      <p>The team brings together alumni from both Fort Myers High School and Riverdale High School. With deep family ties reaching from Buckingham and Alva to the heart of Fort Myers, their local heritage is a cornerstone of the group. They’ve watched Lee County grow for <span class="tbc" data-tbc="years serving Lee County" title="Waiting for confirmation: years serving Lee County">over 30 years</span>. More people, more neighborhoods, more boats and RVs, and not enough covered places to keep them.</p>
       <p>So they built one. Did it themselves. Local crew, local labor.</p>
       <p>Family-owned, family-run, with someone on site every day of the week. Not a chain. Not an out-of-town investment. The people who built it are the same ones running it.</p>
       <p><a class="btn btn-primary" href="about.html">Our story</a></p>
@@ -244,8 +243,8 @@
       <p class="footer-chat">
         <button type="button" class="btn btn-gold" data-open-chat aria-haspopup="dialog" aria-controls="pbrv-chat-panel" aria-expanded="false">Chat with us</button>
       </p>
-      <p><strong style="color:#fff">Gate access</strong><br>24 hours a day, 7 days a week</p>
-      <p><strong style="color:#fff">Office hours</strong><br>Monday–Sunday, 9am–5pm</p>
+      <p><strong style="color:#fff">Gate access</strong><br><span class="tbc" data-tbc="gate hours" title="Waiting for confirmation: gate hours">24 hours a day, 7 days a week</span></p>
+      <p><strong style="color:#fff">Office hours</strong><br><span class="tbc" data-tbc="office hours" title="Waiting for confirmation: office hours">Monday–Sunday, 9am–5pm</span></p>
       <p><strong style="color:#fff">Phone</strong><br><a href="tel:2395230756">(239) 523-0756</a></p>
       <p><strong style="color:#fff">Email</strong><br><a href="mailto:palmbeachstorage@gmail.com">palmbeachstorage@gmail.com</a></p>
       <p><strong style="color:#fff">Address</strong><br>11190 Palm Beach Boulevard,<br>Fort Myers, Florida 33905</p>

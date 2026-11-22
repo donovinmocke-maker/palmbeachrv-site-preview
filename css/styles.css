@@ -923,6 +923,11 @@ html.js-reveal .reveal.is-in {
   .ask-band-cta .btn { width: 100%; text-align: center; }
 }
 
+/* Nov 21: facts waiting for the owner's confirmation look like normal text on the real site.
+   The preview build (build_preview.py) styles them. Review notes never show on the real site. */
+.tbc { }
+.review-note { display: none; }
+
 
 /* Preview-only ribbon (site-preview-build). Do not copy back to the main site. */
 .preview-ribbon {
@@ -939,3 +944,34 @@ html.js-reveal .reveal.is-in {
   z-index: 60;
 }
 .preview-ribbon strong { color: #e0b04a; font-weight: 700; }
+.preview-ribbon .tbc-key { border-bottom: 2px dotted #e0b04a; color: #e0b04a; }
+@media (max-width: 640px) { .preview-ribbon .ribbon-sep { display: none; } .preview-ribbon .ribbon-tbc { display: block; font-weight: 500; } }
+
+/* Preview-only: facts waiting for the owner's confirmation */
+.tbc { border-bottom: 2px dotted #c8962e; cursor: help; }
+.tbc::after {
+  content: "to confirm";
+  display: inline-block;
+  margin-left: 0.3em;
+  padding: 0 0.35em;
+  border-radius: 999px;
+  background: #fff3d6;
+  color: #7a5a12;
+  font: 600 0.62rem/1.5 var(--font-body, sans-serif);
+  letter-spacing: 0.02em;
+  vertical-align: 0.15em;
+  white-space: nowrap;
+  text-transform: none;
+}
+.chip.tbc::after, .price.tbc::after { vertical-align: 0.5em; }
+.review-note {
+  display: block;
+  margin: 1.5rem 0 0;
+  padding: 0.9rem 1rem;
+  background: #fff8e6;
+  border: 1px dashed #c8962e;
+  border-radius: var(--radius-sm, 8px);
+  color: #5a470e;
+  font-size: 0.9rem;
+}
+.review-note strong { color: #3d3008; }

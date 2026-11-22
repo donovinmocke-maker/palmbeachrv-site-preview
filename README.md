@@ -24,7 +24,14 @@ Rent/reserve uses the official Storable `<rental-app>` widget from the current w
 - Live “spaces available” count (placeholder comment is in the footer)
 - Website chat widget (js/chat.js). Leave CHAT_ENDPOINT empty for offline FAQ mode; set it when the AI backend is ready. Callback requests in offline mode open a mailto to palmbeachstorage@gmail.com.
 - Contact/waitlist form backend (the form opens an email to palmbeachstorage@gmail.com until a backend is connected)
-- Facility update videos (too large to bundle; TODOs are on those blog posts)
+- Facility update videos (too large to bundle; review notes mark where they go, shown on the preview only)
 - Social media links (none were published on the current site)
 
 This package is a draft for review. It has not been deployed.
+
+## Facts waiting for the owner (Nov 21, 2026)
+
+Unconfirmed facts are wrapped in `<span class="tbc" data-tbc="topic">` (office hours, gate hours, number of spaces,
+current rates, electric included / 20 vs 30 amp by building, years serving Lee County). They render as normal text
+here; the preview build (`../build_preview.py`) marks them "to confirm". Update the wording and remove the wrapper
+once Teena confirms each one (questions-for-teena.md 1–4 and nice-to-haves). Re-run `../polish_site.py` is safe (idempotent).
